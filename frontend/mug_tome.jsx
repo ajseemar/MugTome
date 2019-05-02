@@ -1,13 +1,35 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import { signup } from './actions/session';
+import Root from './components/root';
 import configureStore from './store/store';
+import {logout} from './actions/session';
 
 document.addEventListener("DOMContentLoaded", () => {
-    const store = configureStore();
+    let preloadedState = {};
+    if (window.window.currentUser) {
+        preloadedState = {
+            entities: {
+                users: {
+                    [window.currentUser.id]: window.currentUser
+                }
+            },
+            errors: {
+                session: []
+            },
+            session: {
+                id: window.currentUser.id
+            }
+        };
+        delete window.currentUser;
+    }
+    const store = configureStore(preloadedState);
+    
+    // 
     window.getState = store.getState;
     window.dispatch = store.dispatch;
-    window.signup = signup;
-    ReactDOM.render(<h1>MugTome</h1>, document.getElementById('root'));
+    window.logout = logout;
+    // 
+
+    ReactDOM.render(<Root store={store} />, document.getElementById('root'));
 });
