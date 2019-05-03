@@ -34,22 +34,47 @@ class SessionForm extends React.Component {
         this.populateState();
     }
 
+    demoLogin (e) {
+        e.preventDefault();
+        this.props.processForm({
+            user: {
+                email: 'email@domain.com',
+                password: 'password'
+            }
+        })
+    }
+
     renderSignUpForm () {
         return (
             <form className='signup-form' onSubmit={this.handleSubmit.bind(this)}>
-                <input placeholder="First name" type="text" value={this.state.first_name} onChange={this.handleInput("first_name")} />
-                <input placeholder="Last name" type="text" value={this.state.last_name} onChange={this.handleInput("last_name")} />
-                <input placeholder="Email" type="text" value={this.state.email} onChange={this.handleInput("email")} />
-                <input placeholder="New password" type="password" value={this.state.password} onChange={this.handleInput("password")} />
-                <label htmlFor="birthday">Birthday</label>
-                <input id="birthday" type="date" value={this.state.date_of_birth} onChange={this.handleInput("date_of_birth")} />
-                <label>
-                    <input type="radio" value='Female' onChange={this.handleInput("gender")} />Female
+                <div className="name-input-fields">
+                    <input id="first-name" placeholder="First name" type="text" value={this.state.first_name} onChange={this.handleInput("first_name")} />
+                    <input id="last-name" placeholder="Last name" type="text" value={this.state.last_name} onChange={this.handleInput("last_name")} />
+                </div>
+                
+                <div className="email-input-field">
+                    <input placeholder="Email" type="text" value={this.state.email} onChange={this.handleInput("email")} />
+                </div>
+                <div className="password-input-field">
+                    <input placeholder="New password" type="password" value={this.state.password} onChange={this.handleInput("password")} />
+                </div>
+                
+                <div className="birthday-input-field">
+                    <label htmlFor="birthday">Birthday</label>
+                    <input id="birthday" type="date" value={this.state.date_of_birth} onChange={this.handleInput("date_of_birth")} />
+                </div>
+
+                <div className="gender-input-field">
+                    <label>
+                        <input type="radio" value='Female' onChange={this.handleInput("gender")} />Female
+                        </label>
+                    <label>
+                        <input type="radio" value='Male' onChange={this.handleInput("gender")} />Male
                     </label>
-                <label>
-                    <input type="radio" value='Male' onChange={this.handleInput("gender")} />Male
-                    </label>
-                <input type="submit" value={this.props.formType} />
+                </div>
+                <div className="button">
+                    <button className="signup-button">{this.props.formType}</button>
+                </div>
             </form>
         );
     }
@@ -57,11 +82,18 @@ class SessionForm extends React.Component {
     renderLogInForm () {
         return (
             <form onSubmit={this.handleSubmit.bind(this)}>
-                <label htmlFor="email">Email</label>
-                <input type="text" value={this.state.email} onChange={this.handleInput("email")} />
-                <label htmlFor="password">Password</label>
-                <input type="password" value={this.state.password} onChange={this.handleInput("password")} />
-                <input type="submit" value={this.props.formType} />
+                <div>
+                    <label htmlFor="email">Email</label>
+                    <input type="text" value={this.state.email} onChange={this.handleInput("email")} />
+                </div>
+                <div>
+                    <label htmlFor="password">Password</label>
+                    <input type="password" value={this.state.password} onChange={this.handleInput("password")} />
+                </div>
+                <div className="buttons">
+                    <button className='demo-login-button' onClick={this.demoLogin.bind(this)}>Demo Login</button>
+                    <button className='login-button'>{this.props.formType}</button>
+                </div>
             </form>
         )
     }

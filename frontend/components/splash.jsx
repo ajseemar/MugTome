@@ -8,13 +8,15 @@ const Splash = props => {
     return (
     <div className='welcome-container'>
         <header>
-            <h1>mugtome</h1>
-            <LoginFormContainer />
+            <div className='header-content'>
+                <h1>mugtome</h1>
+                <LoginFormContainer />
+            </div>
         </header>
         <main>
             <section id='recent-logins'>
                 <h2>Recent Logins</h2>
-                <h6>click your picture or add an account.</h6>
+                <h6>Click your picture or add an account.</h6>
             </section>
 
             <section id='signup-form'>
@@ -23,6 +25,10 @@ const Splash = props => {
                 <SignupFormContainer />
             </section>
         </main>
+
+        <footer>
+            
+        </footer>
     </div>
 )};
 

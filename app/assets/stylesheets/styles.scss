@@ -1,40 +1,153 @@
-#root {
-    display: flex;
-    justify-content: center;
+$CONTAINER_WIDTH_RATIO: 50%;
+$FB_BLUE_COLOR: #3B5998;
+
+body {
+    background-color: #E9EBEE;
 }
 
-div.welcome-container {
-    width: 100%;
+.welcome-container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 580px;
 
     header {
-        height: 82px;
         display: flex;
+        justify-content: center;
         width: 100%;
-        justify-content: space-between;
+        // height: 50px;
+        background-color: $FB_BLUE_COLOR;
+        div.header-content {
+            width: $CONTAINER_WIDTH_RATIO;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            h1 {
+                color: white;
+                font-family: 'Gugi', 'cursive';
+                font-size: 28px;
+                font-weight: bold;
+            }
+            form {
+                display: flex;
+                width: 45%;
+                justify-content: space-between;
+                padding: 0px 0px 15px;
+                align-items: flex-end;
+                
+                div {
+                    display: flex;
+                    flex-direction: column;
+                }
+
+                label {
+                    color: white;
+                    font-family: 'Gugi', 'cursive';
+                    font-size: 10px;
+                    padding: 10px 0px 5px;
+                }
+
+                button {
+                    height: 20px;
+                    line-height: 10px;
+                    background-color: lighten($FB_BLUE_COLOR, 10%);
+                    font-weight: 600;
+                    font-size: 10px;
+                    color: white;
+                    border: 1px solid black;
+                }
+
+                button.demo-login-button {
+                    padding: 0px 15px;
+                }
+            }
+        }
     }
 
     main {
+        width: $CONTAINER_WIDTH_RATIO;
         display: flex;
         justify-content: space-between;
-        width: 100%;
-        height: 100%;
-        // section#recent-logins {
-        //     display: flex;
-        //     flex-direction: column;
-        // }
+        padding-top: 25px;
+        
+        section h2 {
+            font-size: 36px;
+            font-family: 'Patua One', cursive;
+            padding-bottom: 5px;
+        }
 
-        section#signup-form {
+        section h6 {
+            padding-bottom: 25px;
+        }
+
+
+        .signup-form {
             display: flex;
             flex-direction: column;
 
-            .signup-form {
+            input {
+                border-radius: 3px;
+                border: 1px solid gray;
+                padding: 5px;
+                // padding-bottom: 8px;
+            }
+
+            div {
+                padding-bottom: 8px;
+            }
+
+            .name-input-fields {
+                display: flex;
+                justify-content: space-between;
+                width: 100%;
+                // padding-bottom: 8px;
+                input {
+                    width: 45%;
+                }
+            }
+
+            .email-input-field {
+                input {
+                    width: 97%;
+                }
+            }
+
+            .password-input-field {
+                input {
+                    width: 97%;
+                }
+            }
+
+            .birthday-input-field {
                 display: flex;
                 flex-direction: column;
+                padding: 10px 0px;
+
+                input {
+                    width: 50%;
+                }
             }
+
+            .gender-input-field {
+                display: flex;
+                justify-content: space-between;
+                width: 40%;
+                padding-top: 5px;
+            }
+
+            .button {
+                padding: 10px 0px;
+                button {
+                    width: 60%;
+                    box-shadow: inset 53px 55px 90px -66px rgba(163,163,163,0.71);
+                    background-color: #08a13e;
+                    border: 1px solid darken(#08a13e, 10%);
+                    color: white;
+                    padding: 10px;
+                    border-radius: 3px;
+                }
+            }
+
         }
     }
 }
