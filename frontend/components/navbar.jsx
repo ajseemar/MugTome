@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const Navbar = props => (
-        <nav>
+        <nav className='main-navbar'>
             <div id='logo'>
 
             </div>

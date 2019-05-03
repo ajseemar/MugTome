@@ -151,3 +151,14 @@ body {
         }
     }
 }
+
+.main-navbar {
+    display: flex;
+
+    #logo {
+        background-image: image-url('logo.jpg'); 
+        height: 30px;
+        width: 30px;
+        background-position: center;
+    }
+}
