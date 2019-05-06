@@ -1,0 +1,74 @@
+@import './styles/navbar.scss';
+@import './styles//signup_form.scss';
+@import './styles/login_form.scss';
+
+$CONTAINER_WIDTH_RATIO: 50%;
+$FB_BLUE: #3B5998;
+
+body {
+    background-color: #E9EBEE;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+.splash-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .error-list {
+        // display: flex;
+        // flex-direction: column;
+        // align-items: flex-start;
+
+        li {
+            color: red;
+            font-size: 12px;
+        }
+    }
+
+    header {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        background-color: $FB_BLUE;
+
+        .header-content {
+            width: $CONTAINER_WIDTH_RATIO;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            h1 {
+                color: white;
+                font-family: 'Gugi', 'cursive';
+                font-size: 28px;
+                font-weight: bold;
+            }
+            
+            @include login_form;
+        }
+    }
+
+    main {
+        width: $CONTAINER_WIDTH_RATIO;
+        display: flex;
+        justify-content: space-between;
+        padding-top: 25px;
+        
+        section h2 {
+            font-size: 36px;
+            font-family: 'Patua One', cursive;
+            padding-bottom: 5px;
+        }
+
+        section h6 {
+            padding-bottom: 25px;
+        }
+
+        @include signup_form;
+    }
+}
+
+
+
+@include navbar;

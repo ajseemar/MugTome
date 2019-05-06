@@ -1,0 +1,74 @@
+$CONTAINER_WIDTH_RATIO: 50%;
+$FB_BLUE: #3B5998;
+
+@mixin navbar {
+    .navbar-container {
+        display: flex;
+        background-color: $FB_BLUE;
+        justify-content: center;
+        
+        .main-navbar {
+            display: flex;
+            justify-content: flex-start;
+            padding: 10px 0px;
+            width: 100%;
+            
+            #logo {
+                height: 30px;
+                width: 30px;
+                
+                display: flex;
+                align-items: center;
+                margin: 0px 5px 0px 0px;
+                background-color: white;
+                text-decoration: none;
+                
+                p {
+                    font-size: 32px;
+                    font-weight: 700;
+                    color: $FB_BLUE;
+                }
+            }
+            
+        p {
+            font-weight: bold;
+            font-size: 12px;
+            margin: 0px 5px;
+            font-family: Helvetica, Arial, sans-serif;
+        }
+        
+        #search-bar {
+            margin: 0px 5px;
+            
+            input {
+                width: 350px;
+            }
+        }
+        
+        .page-link-container {
+            text-decoration: none;
+            color: white;
+            display: flex;
+            align-items: center;
+        }
+        
+        .profile-page-link {
+            display: flex;
+            align-items: center;
+            
+            img {
+                width: 25px;
+                height: 25px;
+                border-radius: 50%;
+                // border: 1px solid gray;
+                margin: 0px 5px;
+                font-size: 10px;
+            }
+        }
+        
+        .home-page-link {
+            margin: 0px 10px;
+        }
+    }
+}
+}

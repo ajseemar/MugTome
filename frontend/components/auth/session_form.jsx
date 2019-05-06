@@ -44,6 +44,17 @@ class SessionForm extends React.Component {
         })
     }
 
+    renderErrors () {
+        // debugger
+        if (this.props.errors.errorList && this.props.errors.type === this.props.formType) return (
+            <ul className='error-list'>
+                {this.props.errors.errorList.map((err, idx) => (
+                    <li key={idx}>{err}</li>
+                ))}
+            </ul>
+        );
+    }
+
     renderSignUpForm () {
         return (
             <form className='signup-form' onSubmit={this.handleSubmit.bind(this)}>
@@ -91,16 +102,20 @@ class SessionForm extends React.Component {
                     <input type="password" value={this.state.password} onChange={this.handleInput("password")} />
                 </div>
                 <div className="buttons">
-                    <button className='demo-login-button' onClick={this.demoLogin.bind(this)}>Demo Login</button>
                     <button className='login-button'>{this.props.formType}</button>
+                    <button className='demo-login-button' onClick={this.demoLogin.bind(this)}>Demo Login</button>
                 </div>
             </form>
         )
     }
 
     render () {
-        if (this.props.formType === 'Sign Up') return this.renderSignUpForm();
-        else return this.renderLogInForm();
+        return (
+            <div>
+                {this.renderErrors()}
+                {(this.props.formType === 'Sign Up') ? this.renderSignUpForm() : this.renderLogInForm()}
+            </div>
+        );
     }
 }
 

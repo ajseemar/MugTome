@@ -1,0 +1,70 @@
+@mixin signup_form {
+    .signup-form {
+        display: flex;
+        flex-direction: column;
+
+        input {
+            border-radius: 3px;
+            border: 1px solid gray;
+            padding: 5px;
+            // padding-bottom: 8px;
+        }
+
+        div {
+            padding-bottom: 8px;
+        }
+
+        .name-input-fields {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            // padding-bottom: 8px;
+            input {
+                width: 45%;
+            }
+        }
+
+        .email-input-field {
+            input {
+                width: 97%;
+            }
+        }
+
+        .password-input-field {
+            input {
+                width: 97%;
+            }
+        }
+
+        .birthday-input-field {
+            display: flex;
+            flex-direction: column;
+            padding: 10px 0px;
+
+            input {
+                width: 50%;
+            }
+        }
+
+        .gender-input-field {
+            display: flex;
+            justify-content: space-between;
+            width: 40%;
+            padding-top: 5px;
+        }
+
+        .button {
+            padding: 10px 0px;
+            button {
+                width: 60%;
+                box-shadow: inset 53px 55px 90px -66px rgba(163,163,163,0.71);
+                background-color: #08a13e;
+                border: 1px solid darken(#08a13e, 10%);
+                color: white;
+                padding: 10px;
+                border-radius: 3px;
+            }
+        }
+
+    }
+}

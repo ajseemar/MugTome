@@ -1,12 +1,10 @@
 import React from 'react';
 
-import LoginFormContainer from './login_form_container';
-import SignupFormContainer from './signup_form_container';
+import LoginFormContainer from './auth/login_form_container';
+import SignupFormContainer from './auth/signup_form_container';
 
-const Splash = props => {
-    // debugger
-    return (
-    <div className='welcome-container'>
+const Splash = props => (
+    <div className='splash-container'>
         <header>
             <div className='header-content'>
                 <h1>mugtome</h1>
@@ -30,6 +28,6 @@ const Splash = props => {
             
         </footer>
     </div>
-)};
+);
 
 export default Splash;

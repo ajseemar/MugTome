@@ -34,7 +34,7 @@ const Navbar = props => (
 
                 The following are clickable components that have unique drop down menus
 
-                1) friend reques
+                1) friend requests
                 2) notifications
                 3) account switcher
                 4) messenger { --optional-- (icon comes after friend requests) }
