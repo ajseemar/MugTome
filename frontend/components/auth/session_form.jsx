@@ -45,7 +45,6 @@ class SessionForm extends React.Component {
     }
 
     renderErrors () {
-        // debugger
         if (this.props.errors.errorList && this.props.errors.type === this.props.formType) return (
             <ul className='error-list'>
                 {this.props.errors.errorList.map((err, idx) => (
