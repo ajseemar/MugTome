@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 const Navbar = props => (
         <nav className='main-navbar'>
             <div id='logo'>
-
+                <p>m</p>
             </div>
 
             <div id='search-bar'>
