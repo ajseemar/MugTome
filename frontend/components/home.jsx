@@ -1,10 +1,10 @@
 import React from 'react';
 
-import Navbar from './navbar';
+import NavbarContainer from './navbar_container';
 
 const Home = props => (
     <div>
-        <Navbar user={props.user}/>
+        <NavbarContainer />
 
 
         <main>

@@ -3,6 +3,7 @@ $FB_BLUE: #3B5998;
 
 body {
     background-color: #E9EBEE;
+    font-family: Helvetica, Arial, sans-serif;
 }
 
 .welcome-container {
@@ -152,28 +153,71 @@ body {
     }
 }
 
-.main-navbar {
+.navbar-container {
     display: flex;
     background-color: $FB_BLUE;
+    justify-content: center;
+    
+    .main-navbar {
+    display: flex;
+    justify-content: flex-start;
+    padding: 10px 0px;
+    width: 100%;
 
-    #logo {
-        // background-image: image-url('logo.jpg'); 
-        // height: 30px;
-        // width: 30px;
-        // background-position: center;
-        height: 30px;
-        width: 30px;
+        #logo {
+            height: 30px;
+            width: 30px;
 
-        display: flex;
-        align-items: center;
-        justify-content: flex-end;
-        padding: 0px 5px;
-        background-color: white;
+            display: flex;
+            align-items: center;
+            margin: 0px 5px 0px 0px;
+            background-color: white;
+            text-decoration: none;
+
+            p {
+                font-size: 32px;
+                font-weight: 700;
+                color: $FB_BLUE;
+            }
+        }
 
         p {
-            font-size: 32px;
-            font-weight: 700;
-            color: $FB_BLUE;
+            font-weight: bold;
+            font-size: 12px;
+            margin: 0px 5px;
+            // text-align: center;
+        }
+
+        #search-bar {
+            margin: 0px 5px;
+            
+            input {
+                width: 350px;
+            }
+        }
+
+        .page-link-container {
+            text-decoration: none;
+            color: white;
+            display: flex;
+            align-items: center;
+        }
+
+        .profile-page-link {
+            display: flex;
+            align-items: center;
+
+            img {
+                width: 25px;
+                height: 25px;
+                border-radius: 50%;
+                border: 1px solid gray;
+                margin: 0px 5px;
+            }
+        }
+
+        .home-page-link {
+            margin: 0px 10px;
         }
     }
 }

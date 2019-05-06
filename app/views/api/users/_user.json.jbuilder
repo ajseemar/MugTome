@@ -1,2 +1,2 @@
-json.extract! user, :id, :first_name, :last_name, :email#, url_for(:avatar)
+json.extract! user, :id, :first_name, :last_name, :email
 json.avatar url_for(user.avatar)
