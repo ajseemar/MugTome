@@ -1,15 +1,15 @@
 import React from 'react';
 
 import NavbarContainer from './navbar_container';
+import FeatureIndex from './features/feature_index';
 
 const Home = props => (
-    <div>
+    <div id='homepage-container'>
         <NavbarContainer />
 
 
-        <main>
-            <button onClick={() => props.logout(props.user.id)}>Logout</button>
-            {/* Feature Nav Component */}
+        <main className='homepage-main-content'>
+            <FeatureIndex user={props.user} />
             {/* Index Container */}
             {/* Story Container */}
             {/* People You May Know Container */}
