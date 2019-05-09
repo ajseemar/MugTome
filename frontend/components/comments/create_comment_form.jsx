@@ -18,9 +18,13 @@ class CreateCommentForm extends React.Component {
 
     render () {
         return (
-            <form>
+            <form className='create-comment-form'>
                 <img src={this.props.user.avatar} alt="User Avatar" />
-                <input type="body" placeholder="Write a comment..." onChange={this.handleInput("body")}/>
+                <div>
+                    <input id='comment' type="body" placeholder="Write a comment..." onChange={this.handleInput("body")}/>
+                    <p>Press Enter to post.</p>
+                </div>
+                
             </form>
         );
     }

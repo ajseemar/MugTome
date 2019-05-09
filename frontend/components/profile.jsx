@@ -13,9 +13,22 @@ const Profile = (props) => (
                         <h1>
                             {props.user.first_name[0].toUpperCase() + props.user.first_name.slice(1)} {props.user.last_name[0].toUpperCase() + props.user.last_name.slice(1)}
                         </h1>
-                        <button>Edit Profile</button>
+                        {(props.user.id === parseInt(props.match.params.id)) ? (
+                            <button>
+                                <i className="far fa-edit"></i>
+                                Edit Profile
+                            </button>
+                        ) : (
+                            <button>
+                                <i className="fas fa-user-plus"></i>
+                                Add Friend
+                            </button>
+                        )}
+
                     </div>
-                    <div className="profile-navbar"></div>
+                    <div className="profile-navbar">
+                    {/* Link to Photos Page */}
+                    </div>
                 </div>
             </header>
 

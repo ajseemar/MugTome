@@ -1,3 +1,5 @@
+@import './post_item.scss';
+
 @mixin profile_page {
     .profile-page-container {
         display: flex;
@@ -22,7 +24,7 @@
             .profile-header-avatar {
                 border-radius: 50%;
                 width: 200px;
-                border: 8px solid white;
+                border: 6px solid white;
                 margin: 20px;
                 margin-top: 50px;
             }
@@ -40,6 +42,18 @@
                     color: white;
                     // font-family: Helvetica, Arial, sans-serif;
                     font-size: 24px;
+                }
+
+                button {
+                    margin-right: 16px;
+                    padding: 0px 10px;
+                    color: #4B4F56;
+                    font-weight: bold;
+                    font-size: 12px;
+
+                    i {
+                        margin-right: 5px;
+                    }
                 }
             }
         }
@@ -94,19 +108,22 @@
                         color: #4b4f56;
                         font-weight: 600;
                         font-size: 13px;
-                        padding: 10px;
+                        padding: 16px;
                         padding-left: 0px;
                     }
+                    @include post;
+                    // .post-item-container {
+                    //     margin-bottom: 15px;
+        
+                    //     header {
+                    //         background-color: purple;
+                    //     }
+        
+        
+                    // }
                 }
             }
 
-            .post-item-container {
-                margin-bottom: 15px;
-
-                header {
-                    background-color: purple;
-                }
-            }
         }
     }
 }

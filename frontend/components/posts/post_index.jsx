@@ -1,5 +1,5 @@
 import React from 'react';
-import PostIndexItem from './post_index_item';
+import PostIndexItemContainer from './post_index_item_container';
 
 class PostIndex extends React.Component {
     constructor (props) {
@@ -12,9 +12,9 @@ class PostIndex extends React.Component {
 
 
     renderPosts () {
-        if (this.props.posts)
+        if (this.props.posts.length > 0)
             return this.props.posts.map((post, idx) => (
-                <PostIndexItem key={idx} post={post} user={this.props.user} />
+                <PostIndexItemContainer key={idx} post={post} />
             ));
     }
 
