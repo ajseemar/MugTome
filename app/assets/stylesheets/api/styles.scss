@@ -1,6 +1,8 @@
 @import './styles/navbar.scss';
 @import './styles//signup_form.scss';
 @import './styles/login_form.scss';
+@import './styles/home_page.scss';
+@import './styles/profile_page.scss';
 
 $CONTAINER_WIDTH_RATIO: 50%;
 $FB_BLUE: #3B5998;
@@ -71,60 +73,9 @@ body {
 }
 
 
-.homepage-main-content {
-    p {
-        font-family: Helvetica, Arial, sans-serif;
-        font-size: 13px;
-        color: black;
-    }
-
-    .feature-list-container {
-        #welcome {
-            img {
-                content: url('logo.jpg');
-            }
-        }
-    }
-
-    .profile-link-container {
-        text-decoration: none;
-        color: white;
-        display: flex;
-        align-items: center;
-        padding: 15px 3px;
-        
-        .profile-page-link {
-            display: flex;
-            align-items: center;
-            
-            img {
-                width: 20px;
-                height: 20px;
-                border-radius: 50%;
-                margin: 0px 5px;
-                font-size: 10px;
-            }
-        }
-    }
-
-    .link-container {
-        text-decoration: none;
-
-        .link {
-            display: flex;
-            align-items: center;
-
-            img {
-                width: 25px;
-                height: 25px;
-                border-radius: 50%;
-                margin: 0px 5px;
-                font-size: 10px;
-            }
-        }
-    }
-}
-
+@include homepage;
 
 
 @include navbar;
+
+@include profile_page;

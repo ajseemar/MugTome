@@ -78,7 +78,11 @@ $FB_BLUE: #3B5998;
                     padding: 3px 0px 0px 0px;
                     // margin: 0px;
                 }
+
+                button {
+                    position: absolute;
+                }
             }
         }
     }
-}
+};

@@ -1,0 +1,112 @@
+@mixin profile_page {
+    .profile-page-container {
+        display: flex;
+        // width: 50%;
+        justify-content: center;
+    }
+
+    .profile-page {
+        width: 50%;
+
+        h1, h3, button {
+            font-family: Helvetica, Arial, sans-serif;
+        }
+
+        .profile-header {
+            display: flex;
+            align-items: flex-end;
+            margin-bottom: 10px;
+            // padding: 20px;
+            background-color: #1D1E21;
+
+            .profile-header-avatar {
+                border-radius: 50%;
+                width: 200px;
+                border: 8px solid white;
+                margin: 20px;
+                margin-top: 50px;
+            }
+
+            div {
+                width: 100%;
+            }
+            
+            .title {
+                display: flex;
+                justify-content: space-between;
+                margin-bottom: 15px;
+
+                h1 {
+                    color: white;
+                    // font-family: Helvetica, Arial, sans-serif;
+                    font-size: 24px;
+                }
+            }
+        }
+
+        main {
+            display: flex;
+            justify-content: space-between;
+
+            .informational-components {
+                width: 40%;
+                margin-right: 3px;
+            }
+
+            .post-components {
+                width: 60%;
+                margin-left: 3px;
+
+                form {
+                    // margin-bottom: 10px;
+
+                    h3 {
+                        color: #4b4f56;
+                        font-weight: 600;
+                        font-size: 13px;
+                        padding: 10px;
+
+                        i {
+                            padding-right: 5px;
+                        }
+                    }
+
+                    .post-input-container {
+                        display: flex;
+                        align-items: center;
+
+                        img {
+                            width: 50px;
+                            border-radius: 50%;
+                            padding: 10px;
+                        }
+
+                        textarea {
+                            padding: 20px;
+                            border: none;
+                            width: 100%;
+                        }
+                    }
+                }
+                
+                .post-index-container {
+                    h3 {
+                        color: #4b4f56;
+                        font-weight: 600;
+                        font-size: 13px;
+                        padding: 10px;
+                        padding-left: 0px;
+                    }
+                }
+            }
+
+            .post-item-container {
+                margin-bottom: 15px;
+
+                header {
+                    background-color: purple;
+                }
+            }
+        }
+    }
+}

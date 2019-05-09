@@ -8,3 +8,7 @@ else
         json.avatar image_url('df.jpg')
     end
 end
+
+json.feedPostIds do 
+    json.array! user.posts_to_feed.order(created_at: :desc).map { |post| post.id }
+end

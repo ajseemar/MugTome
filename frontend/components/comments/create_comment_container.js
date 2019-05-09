@@ -1,13 +1,12 @@
 import { connect } from 'react-redux';
-
-import Home from "./home";
-import { logout } from '../actions/session';
+import CreateCommentForm from './create_comment_form';
 
 const msp = state => ({
     user: state.entities.users[state.session.id]
 });
 
 const mdp = dispatch => ({
+
 });
 
-export default connect(msp, mdp)(Home);
+export default connect(msp, mdp)(CreateCommentForm);
