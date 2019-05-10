@@ -15,7 +15,7 @@ const FeatureIndex = props => (
         </Link>
 
         <FeatureItem feature="News Feed" path="/home" logo="https://cdn1.iconfinder.com/data/icons/facebook-ui/48/additional_icons-14-512.png"/>
-        <FeatureItem id='welcome' feature="Welcome" path="/greeting" logo={'logo.jpg'}/>
+        {/* <FeatureItem id='welcome' feature="Welcome" path="/greeting" logo={'logo.jpg'}/> */}
     </div>
 );
 

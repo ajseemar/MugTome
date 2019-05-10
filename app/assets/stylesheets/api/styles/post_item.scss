@@ -26,6 +26,10 @@
                     display: flex;
                     width: 100%;
 
+                    .page-link-container {
+                        text-decoration: none;
+                    }
+
                     h2 {
                         padding-top: 10px;
                         font-size: 14px;
@@ -48,6 +52,7 @@
 
                 i {
                     color: #616770;
+                    cursor: pointer;
                 }
             }
 
@@ -93,11 +98,6 @@
             }
 
             @include comment_form;
-            // .create-comment-form {
-            //     img {
-            //         border-radius: 50%;
-            //     }
-            // }
         }
     }
 }

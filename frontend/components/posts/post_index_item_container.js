@@ -1,21 +1,23 @@
 import { connect } from 'react-redux';
+import { withRouter } from 'react-router-dom';
+
 import PostIndexItem from './post_index_item';
 import { requestUser } from '../../actions/users';
+import { deletePost } from '../../actions/posts';
 
 const msp = (state, ownProps) => {
     let timelineOwner = null;
-    // if (!state.entities.users[ownProps.post.friend_id]) requestUser(ownProps.post.friend_id);
-    // if (!state.entities.users[ownProps.post.user_id]) requestUser(ownProps.post.user_id);
     if (ownProps.post.user_id != ownProps.post.friend_id) timelineOwner = state.entities.users[ownProps.post.friend_id];
-    // debugger;
     return ({
         postOwner: state.entities.users[ownProps.post.user_id],
+        user: state.entities.users[state.session.id],
         timelineOwner
     });
 };
 
 const mdp = dispatch => ({
-    requestUser: id => dispatch(requestUser(id))
+    requestUser: id => dispatch(requestUser(id)),
+    deletePost: id => dispatch(deletePost(id))
 });
 
-export default connect(msp, mdp)(PostIndexItem);
+export default withRouter(connect(msp, mdp)(PostIndexItem));
